@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,20 +31,8 @@
     min-height:100vh;
   }
 
-  /* Floating frogs background */
-  .floating-bg{
-    position:fixed;
-    inset:0;
-    pointer-events:none;
-    z-index:0;
-    overflow:hidden;
-  }
-  .floating-bg span{
-    position:absolute;
-    font-size:2rem;
-    opacity:0.15;
-    animation:float 15s linear infinite;
-  }
+  .floating-bg{ position:fixed; inset:0; pointer-events:none; z-index:0; overflow:hidden;}
+  .floating-bg span{ position:absolute; font-size:2rem; opacity:0.15; animation:float 15s linear infinite;}
   @keyframes float{
     0%{ transform:translateY(110vh) rotate(0); }
     100%{ transform:translateY(-20vh) rotate(360deg); }
@@ -51,61 +40,24 @@
 
   /* NAV */
   nav{
-    position:fixed;
-    top:0; left:0; right:0;
-    z-index:100;
-    background:rgba(10,10,20,0.85);
-    backdrop-filter:blur(12px);
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    background:rgba(10,10,20,0.85); backdrop-filter:blur(12px);
     border-bottom:2px solid var(--yellow);
-    padding:0.8rem 2rem;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+    padding:0.8rem 2rem; display:flex; justify-content:space-between; align-items:center;
   }
-  nav .logo{
-    display:flex;
-    align-items:center;
-    gap:0.6rem;
-    font-family:'Bangers',cursive;
-    font-size:1.8rem;
-    color:var(--yellow);
-    letter-spacing:2px;
-  }
+  nav .logo{ display:flex; align-items:center; gap:0.6rem; font-family:'Bangers',cursive; font-size:1.8rem; color:var(--yellow); letter-spacing:2px; }
   nav .logo img{ width:40px; height:40px; border-radius:50%; border:2px solid var(--yellow);}
-  nav ul{
-    display:flex;
-    gap:1.5rem;
-    list-style:none;
-  }
-  nav ul a{
-    color:#fff;
-    text-decoration:none;
-    font-weight:600;
-    transition:color 0.3s;
-  }
+  nav ul{ display:flex; gap:1.5rem; list-style:none; }
+  nav ul a{ color:#fff; text-decoration:none; font-weight:600; transition:color 0.3s; }
   nav ul a:hover{ color:var(--yellow); }
   .menu-btn{ display:none; background:none; border:none; color:var(--yellow); font-size:1.8rem; cursor:pointer;}
 
   /* HERO */
-  .hero{
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:6rem 1.5rem 3rem;
-    position:relative;
-    z-index:1;
-  }
+  .hero{ min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:6rem 1.5rem 3rem; position:relative; z-index:1; }
   .hero img.logo-big{
-    width:240px;
-    height:240px;
-    border-radius:50%;
-    border:6px solid var(--yellow);
+    width:240px; height:240px; border-radius:50%; border:6px solid var(--yellow);
     box-shadow: 0 0 60px rgba(255,223,58,0.6), 0 0 120px rgba(255,223,58,0.3);
-    animation:bounce 3s ease-in-out infinite;
-    object-fit:cover;
+    animation:bounce 3s ease-in-out infinite; object-fit:cover;
   }
   @keyframes bounce{
     0%,100%{ transform:translateY(0) rotate(-3deg);}
@@ -123,261 +75,167 @@
     animation:shine 4s linear infinite;
     letter-spacing:4px;
   }
-  @keyframes shine{
-    to { background-position:300% center; }
-  }
-  .hero p.tagline{
-    font-size:clamp(1rem, 2.5vw, 1.5rem);
-    margin-top:0.5rem;
-    color:#ddd;
-    max-width:700px;
-  }
-  .cta-row{
-    margin-top:2rem;
-    display:flex;
-    gap:1rem;
-    flex-wrap:wrap;
-    justify-content:center;
-  }
-  .btn{
-    padding:0.9rem 1.8rem;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:700;
-    border:none;
-    cursor:pointer;
-    transition:all 0.3s;
-    display:inline-flex;
-    align-items:center;
-    gap:0.5rem;
-    font-family:'Poppins',sans-serif;
-    font-size:1rem;
-  }
-  .btn-primary{
-    background:var(--yellow);
-    color:#000;
-    box-shadow:0 4px 20px rgba(255,223,58,0.4);
-  }
+  @keyframes shine{ to { background-position:300% center; } }
+  .hero p.tagline{ font-size:clamp(1rem, 2.5vw, 1.5rem); margin-top:0.5rem; color:#ddd; max-width:700px; }
+  .cta-row{ margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap; justify-content:center; }
+  .btn{ padding:0.9rem 1.8rem; border-radius:50px; text-decoration:none; font-weight:700; border:none; cursor:pointer; transition:all 0.3s; display:inline-flex; align-items:center; gap:0.5rem; font-family:'Poppins',sans-serif; font-size:1rem; }
+  .btn-primary{ background:var(--yellow); color:#000; box-shadow:0 4px 20px rgba(255,223,58,0.4); }
   .btn-primary:hover{ transform:translateY(-3px) scale(1.05); box-shadow:0 8px 30px rgba(255,223,58,0.6);}
-  .btn-secondary{
-    background:transparent;
-    color:#fff;
-    border:2px solid var(--yellow);
-  }
+  .btn-secondary{ background:transparent; color:#fff; border:2px solid var(--yellow); }
   .btn-secondary:hover{ background:var(--yellow); color:#000; }
 
-  /* CA */
-  .ca-box{
-    margin-top:2.5rem;
-    background:rgba(255,255,255,0.06);
-    border:1px solid rgba(255,223,58,0.4);
-    padding:1rem 1.4rem;
-    border-radius:50px;
-    display:flex;
-    align-items:center;
-    gap:0.8rem;
-    flex-wrap:wrap;
-    justify-content:center;
-    max-width:95%;
-    backdrop-filter:blur(10px);
-  }
+  .ca-box{ margin-top:2.5rem; background:rgba(255,255,255,0.06); border:1px solid rgba(255,223,58,0.4); padding:1rem 1.4rem; border-radius:50px; display:flex; align-items:center; gap:0.8rem; flex-wrap:wrap; justify-content:center; max-width:95%; backdrop-filter:blur(10px); }
   .ca-box .ca-label{ color:var(--yellow); font-weight:700;}
   .ca-box .ca{ font-family:monospace; word-break:break-all; font-size:0.9rem;}
-  .copy-btn{
-    background:var(--yellow);
-    border:none;
-    padding:0.4rem 1rem;
-    border-radius:30px;
-    font-weight:700;
-    cursor:pointer;
-    transition:all 0.3s;
-  }
+  .copy-btn{ background:var(--yellow); border:none; padding:0.4rem 1rem; border-radius:30px; font-weight:700; cursor:pointer; transition:all 0.3s; }
   .copy-btn:hover{ background:var(--green); }
   .copy-btn.copied{ background:var(--green);}
 
-  /* Sections */
-  section{
-    padding:5rem 1.5rem;
-    position:relative;
-    z-index:1;
-  }
+  section{ padding:5rem 1.5rem; position:relative; z-index:1; }
   .container{ max-width:1200px; margin:0 auto; }
-  .section-title{
-    font-family:'Bangers',cursive;
-    font-size:clamp(2.5rem, 6vw, 4rem);
-    text-align:center;
-    margin-bottom:3rem;
-    color:var(--yellow);
-    letter-spacing:3px;
-    text-shadow:0 4px 20px rgba(255,223,58,0.3);
-  }
+  .section-title{ font-family:'Bangers',cursive; font-size:clamp(2.5rem, 6vw, 4rem); text-align:center; margin-bottom:3rem; color:var(--yellow); letter-spacing:3px; text-shadow:0 4px 20px rgba(255,223,58,0.3); }
 
-  /* About */
-  .about-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:1.5rem;
-  }
-  .about-card{
-    background:linear-gradient(135deg, rgba(255,223,58,0.1), rgba(255,78,205,0.1));
-    border:1px solid rgba(255,223,58,0.3);
-    border-radius:20px;
-    padding:2rem;
-    text-align:center;
-    transition:all 0.3s;
-  }
-  .about-card:hover{
-    transform:translateY(-10px);
-    border-color:var(--yellow);
-    box-shadow:0 10px 40px rgba(255,223,58,0.3);
-  }
+  .about-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.5rem; }
+  .about-card{ background:linear-gradient(135deg, rgba(255,223,58,0.1), rgba(255,78,205,0.1)); border:1px solid rgba(255,223,58,0.3); border-radius:20px; padding:2rem; text-align:center; transition:all 0.3s; }
+  .about-card:hover{ transform:translateY(-10px); border-color:var(--yellow); box-shadow:0 10px 40px rgba(255,223,58,0.3); }
   .about-card .emoji{ font-size:3rem; margin-bottom:1rem;}
   .about-card h3{ color:var(--yellow); margin-bottom:0.6rem;}
 
-  /* Gallery */
-  .gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:1rem;
-  }
-  .gallery img{
-    width:100%;
-    aspect-ratio:1;
-    object-fit:cover;
-    border-radius:15px;
-    border:2px solid rgba(255,223,58,0.3);
-    transition:all 0.3s;
-    cursor:pointer;
-  }
-  .gallery img:hover{
-    transform:scale(1.05) rotate(2deg);
-    border-color:var(--yellow);
-    box-shadow:0 10px 30px rgba(255,223,58,0.4);
-  }
+  .gallery{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; }
+  .gallery img{ width:100%; aspect-ratio:1; object-fit:cover; border-radius:15px; border:2px solid rgba(255,223,58,0.3); transition:all 0.3s; cursor:pointer; }
+  .gallery img:hover{ transform:scale(1.05) rotate(2deg); border-color:var(--yellow); box-shadow:0 10px 30px rgba(255,223,58,0.4); }
 
-  /* Meme generator */
-  .meme-gen{
-    background:linear-gradient(135deg, rgba(255,78,205,0.1), rgba(255,223,58,0.1));
+  .meme-gen{ background:linear-gradient(135deg, rgba(255,78,205,0.1), rgba(255,223,58,0.1)); border:2px solid var(--yellow); border-radius:25px; padding:2rem; max-width:900px; margin:0 auto; }
+  .meme-controls{ display:grid; grid-template-columns:1fr; gap:1rem; margin-bottom:1.5rem; }
+  .meme-controls input{ padding:0.9rem 1.2rem; border-radius:50px; border:2px solid rgba(255,223,58,0.4); background:rgba(0,0,0,0.4); color:#fff; font-size:1rem; font-weight:600; }
+  .meme-controls input:focus{ outline:none; border-color:var(--yellow);}
+  .image-picker{ display:grid; grid-template-columns:repeat(auto-fill,minmax(80px,1fr)); gap:0.5rem; margin-bottom:1rem; }
+  .image-picker img{ width:100%; aspect-ratio:1; object-fit:cover; border-radius:10px; border:3px solid transparent; cursor:pointer; transition:all 0.2s; }
+  .image-picker img.selected{ border-color:var(--yellow); transform:scale(0.95); }
+  .upload-label{ display:inline-block; padding:0.7rem 1.3rem; background:rgba(255,255,255,0.1); border:2px dashed var(--yellow); border-radius:30px; cursor:pointer; text-align:center; width:100%; font-weight:600; transition:all 0.3s; }
+  .upload-label:hover{ background:rgba(255,223,58,0.15);}
+  #memeCanvas{ width:100%; max-width:500px; height:auto; border-radius:15px; background:#000; margin:1rem auto; display:block; border:2px solid var(--yellow); }
+  .meme-actions{ display:flex; gap:0.8rem; justify-content:center; flex-wrap:wrap; margin-top:1rem; }
+
+  /* ===== GAME SECTION ===== */
+  .game-wrap{
+    max-width:500px;
+    margin:0 auto;
+    background:linear-gradient(135deg, rgba(255,223,58,0.1), rgba(255,78,205,0.1));
     border:2px solid var(--yellow);
     border-radius:25px;
-    padding:2rem;
-    max-width:900px;
-    margin:0 auto;
+    padding:1.5rem;
+    box-shadow: 0 0 40px rgba(255,223,58,0.2);
   }
-  .meme-controls{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:1rem;
-    margin-bottom:1.5rem;
+  .game-tagline{ text-align:center; color:#ccc; margin-bottom:1.5rem; font-size:1.1rem; }
+  #fregGameContainer{
+    position:relative;
+    width:100%;
+    aspect-ratio: 9/16;
+    max-height:700px;
+    background:#0a1910;
+    border-radius:18px;
+    overflow:hidden;
+    border:3px solid var(--yellow);
+    box-shadow: inset 0 0 30px rgba(0,0,0,0.6);
   }
-  .meme-controls input{
-    padding:0.9rem 1.2rem;
-    border-radius:50px;
-    border:2px solid rgba(255,223,58,0.4);
-    background:rgba(0,0,0,0.4);
+  #fregGameCanvas{ display:block; width:100%; height:100%; touch-action:none;}
+  
+  .game-screen{
+    position:absolute; inset:0;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    background: rgba(5,10,5,0.93); backdrop-filter:blur(8px);
+    z-index:10; text-align:center; padding:1.5rem;
+    transition: opacity 0.2s;
+  }
+  .game-screen.hidden{ display:none; }
+  .game-screen h2{
+    font-family:'Bangers',cursive;
+    font-size: 3rem;
+    color:var(--yellow);
+    letter-spacing:3px;
+    text-shadow: 3px 3px 0 #000;
+    margin-bottom: 0.5rem;
+    line-height:1;
+  }
+  .game-screen h3{
+    font-family:'Bangers', cursive;
+    font-size: 1.6rem;
     color:#fff;
-    font-size:1rem;
-    font-weight:600;
-  }
-  .meme-controls input:focus{ outline:none; border-color:var(--yellow);}
-  .image-picker{
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(80px,1fr));
-    gap:0.5rem;
+    letter-spacing:2px;
     margin-bottom:1rem;
   }
-  .image-picker img{
-    width:100%;
-    aspect-ratio:1;
-    object-fit:cover;
-    border-radius:10px;
-    border:3px solid transparent;
+  .game-screen p{ color:#a3e6b5; margin-bottom: 1.5rem; font-size: 0.95rem;}
+  .game-btn{
+    background: linear-gradient(180deg, var(--yellow), var(--yellow-dark));
+    color:#000; border:none;
+    padding: 14px 30px;
+    font-family:'Bangers', cursive;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    border-radius: 50px;
     cursor:pointer;
-    transition:all 0.2s;
+    box-shadow: 0 5px 0 #854d0e;
+    margin: 6px;
+    transition: transform 0.1s;
+    min-width: 220px;
   }
-  .image-picker img.selected{
-    border-color:var(--yellow);
-    transform:scale(0.95);
-  }
-  .upload-label{
-    display:inline-block;
-    padding:0.7rem 1.3rem;
-    background:rgba(255,255,255,0.1);
-    border:2px dashed var(--yellow);
-    border-radius:30px;
-    cursor:pointer;
-    text-align:center;
-    width:100%;
-    font-weight:600;
-    transition:all 0.3s;
-  }
-  .upload-label:hover{ background:rgba(255,223,58,0.15);}
-  #memeCanvas{
-    width:100%;
-    max-width:500px;
-    height:auto;
-    border-radius:15px;
-    background:#000;
-    margin:1rem auto;
-    display:block;
-    border:2px solid var(--yellow);
-  }
-  .meme-actions{
-    display:flex;
-    gap:0.8rem;
-    justify-content:center;
-    flex-wrap:wrap;
-    margin-top:1rem;
+  .game-btn:active{ transform:translateY(3px); box-shadow: 0 2px 0 #854d0e;}
+  .game-btn.dark{ background:linear-gradient(180deg,#334155,#1e293b); color:#fff; box-shadow:0 5px 0 #0f172a;}
+  .game-btn.green{ background:linear-gradient(180deg,#4ade80,#16a34a); color:#fff; box-shadow:0 5px 0 #14532d;}
+  
+  #playerName{
+    background:rgba(0,0,0,0.5); border:3px solid var(--yellow); color:#fff;
+    padding: 12px; font-size: 1.3rem; text-align:center; text-transform:uppercase;
+    border-radius: 12px; width: 220px; margin-bottom: 12px; outline:none;
+    font-family:'Bangers', cursive; letter-spacing: 2px;
   }
 
-  /* Footer */
-  footer{
-    background:rgba(0,0,0,0.5);
-    text-align:center;
-    padding:3rem 1.5rem 2rem;
-    border-top:2px solid var(--yellow);
-    position:relative;
-    z-index:1;
+  #fregGameHud{
+    position:absolute; top:0; left:0; width:100%;
+    padding:12px 18px; display:flex; justify-content:space-between;
+    pointer-events:none; z-index:5;
   }
-  footer .socials{
-    display:flex;
-    gap:1rem;
-    justify-content:center;
-    margin:1rem 0;
-    flex-wrap:wrap;
+  .hud-stat{
+    font-family:'Bangers', cursive;
+    font-size: 1.6rem;
+    color:#fff; text-shadow: 2px 2px 0 #000;
+    letter-spacing: 1px;
   }
-  footer .socials a{
-    width:55px;
-    height:55px;
-    border-radius:50%;
-    background:var(--yellow);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:1.5rem;
-    text-decoration:none;
-    color:#000;
-    transition:all 0.3s;
+  .hud-score{ color: var(--yellow); }
+  
+  #lbList{
+    width:100%; max-width: 320px;
+    background:rgba(0,0,0,0.5); border:1px solid var(--yellow);
+    border-radius: 12px; padding: 12px;
+    max-height: 280px; overflow-y:auto; margin-bottom: 15px;
   }
-  footer .socials a:hover{
-    transform:translateY(-5px) rotate(360deg);
-    background:var(--green);
+  .lb-row{
+    display:flex; justify-content:space-between; align-items:center;
+    padding: 8px 4px; border-bottom: 1px solid rgba(255,223,58,0.15);
+    color:#fff; font-size: 1rem;
   }
+  .lb-row:last-child{ border-bottom:none; }
+  .lb-row .rk{ width:40px; color:var(--yellow); font-weight:bold; text-align:left;}
+  .lb-row .nm{ flex:1; text-align:left;}
+  .lb-row .sc{ color:var(--yellow); font-weight:bold;}
+  
+  #flashOverlay{
+    position:absolute; inset:0;
+    background:#ef4444; opacity:0;
+    pointer-events:none; transition:opacity 0.1s; z-index:4;
+  }
+
+  /* FOOTER */
+  footer{ background:rgba(0,0,0,0.5); text-align:center; padding:3rem 1.5rem 2rem; border-top:2px solid var(--yellow); position:relative; z-index:1; }
+  footer .socials{ display:flex; gap:1rem; justify-content:center; margin:1rem 0; flex-wrap:wrap; }
+  footer .socials a{ width:55px; height:55px; border-radius:50%; background:var(--yellow); display:flex; align-items:center; justify-content:center; font-size:1.5rem; text-decoration:none; color:#000; transition:all 0.3s; }
+  footer .socials a:hover{ transform:translateY(-5px) rotate(360deg); background:var(--green); }
   footer p{ color:#888; margin-top:1rem; font-size:0.9rem;}
   footer .disclaimer{ color:#555; font-size:0.75rem; max-width:600px; margin:1rem auto 0;}
 
-  /* Responsive */
   @media (max-width:768px){
-    nav ul{
-      position:absolute;
-      top:100%; left:0; right:0;
-      background:rgba(10,10,20,0.98);
-      flex-direction:column;
-      padding:1.5rem;
-      gap:1rem;
-      border-bottom:2px solid var(--yellow);
-      display:none;
-    }
+    nav ul{ position:absolute; top:100%; left:0; right:0; background:rgba(10,10,20,0.98); flex-direction:column; padding:1.5rem; gap:1rem; border-bottom:2px solid var(--yellow); display:none; }
     nav ul.active{ display:flex; }
     .menu-btn{ display:block; }
     .hero img.logo-big{ width:180px; height:180px;}
@@ -398,6 +256,7 @@
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#game">🎮 Game</a></li>
     <li><a href="#meme">Meme Maker</a></li>
     <li><a href="#community">Community</a></li>
   </ul>
@@ -411,7 +270,8 @@
 
   <div class="cta-row">
     <a href="https://dexscreener.com/solana/b6z24ujrx2hyd8qt8enymamvm6d4uk2g7hyukuown3lr" target="_blank" class="btn btn-primary">📈 Buy $FREG</a>
-    <a href="https://t.me/FregCTOOfficial" target="_blank" class="btn btn-secondary">💬 Join Telegram</a>
+    <a href="#game" class="btn btn-primary">🎮 Play Game</a>
+    <a href="https://t.me/FregCTOOfficial" target="_blank" class="btn btn-secondary">💬 Telegram</a>
   </div>
 
   <div class="ca-box">
@@ -426,26 +286,10 @@
   <div class="container">
     <h2 class="section-title">Why $FREG?</h2>
     <div class="about-grid">
-      <div class="about-card">
-        <div class="emoji">🐸</div>
-        <h3>Pure Meme</h3>
-        <p>The yellow frog you didn't know you needed. Born from the depths of crypto culture.</p>
-      </div>
-      <div class="about-card">
-        <div class="emoji">⚡</div>
-        <h3>Solana Speed</h3>
-        <p>Lightning fast transactions, ultra low fees. Built on the most degen-friendly chain.</p>
-      </div>
-      <div class="about-card">
-        <div class="emoji">💎</div>
-        <h3>Diamond Community</h3>
-        <p>An army of holders ready to take $FREG to the moon and beyond. We are unstoppable.</p>
-      </div>
-      <div class="about-card">
-        <div class="emoji">🚀</div>
-        <h3>Moon Mission</h3>
-        <p>Stable foundation, explosive vision. The frog that hops higher than the rest.</p>
-      </div>
+      <div class="about-card"><div class="emoji">🐸</div><h3>Pure Meme</h3><p>The yellow frog you didn't know you needed. Born from the depths of crypto culture.</p></div>
+      <div class="about-card"><div class="emoji">⚡</div><h3>Solana Speed</h3><p>Lightning fast transactions, ultra low fees. Built on the most degen-friendly chain.</p></div>
+      <div class="about-card"><div class="emoji">💎</div><h3>Diamond Community</h3><p>An army of holders ready to take $FREG to the moon and beyond. We are unstoppable.</p></div>
+      <div class="about-card"><div class="emoji">🚀</div><h3>Moon Mission</h3><p>Stable foundation, explosive vision. The frog that hops higher than the rest.</p></div>
     </div>
   </div>
 </section>
@@ -464,7 +308,57 @@
       <img src="images/freg7.jpg" alt="Freg" onclick="useImageInMeme(this.src)"/>
       <img src="images/freg8.jpg" alt="Freg" onclick="useImageInMeme(this.src)"/>
       <img src="images/freg9.jpg" alt="Freg" onclick="useImageInMeme(this.src)"/>
-     <img src="images/freg10.jpg" alt="Freg" onclick="useImageInMeme(this.src)"/>
+      <img src="images/freg10.jpg" alt="Freg" onclick="useImageInMeme(this.src)"/>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GAME SECTION ============ -->
+<section id="game">
+  <div class="container">
+    <h2 class="section-title">🎮 $FREG Money Rain</h2>
+    <p class="game-tagline">Catch the 🟡 Coins • Grab 🟢 Green Candles • DODGE 🔴 Red Candles!<br>Compete for the Top Spot on the Global Leaderboard 🏆</p>
+    
+    <div class="game-wrap">
+      <div id="fregGameContainer">
+        <canvas id="fregGameCanvas"></canvas>
+        <div id="flashOverlay"></div>
+
+        <div id="fregGameHud" class="hidden">
+          <div class="hud-stat hud-score">$<span id="scoreUI">0</span></div>
+          <div class="hud-stat" id="livesUI">❤️❤️❤️</div>
+        </div>
+
+        <!-- START SCREEN -->
+        <div id="gameStart" class="game-screen">
+          <h2>$FREG</h2>
+          <h3>MONEY RAIN</h3>
+          <p>Drag finger or move mouse to control Freg.<br>Stay alive. Get rich.</p>
+          <button class="game-btn" onclick="fregStartGame()">▶ PLAY NOW</button>
+          <button class="game-btn dark" onclick="fregShowLeaderboard()">🏆 LEADERBOARD</button>
+        </div>
+
+        <!-- GAME OVER -->
+        <div id="gameOver" class="game-screen hidden">
+          <h2 style="color:#ef4444; text-shadow: 3px 3px 0 #7f1d1d;">REKT!</h2>
+          <h3>SCORE: <span id="finalScore" style="color:var(--yellow);">0</span></h3>
+          <div id="submitUI">
+            <input type="text" id="playerName" placeholder="YOUR TAG" maxlength="10"/>
+            <br>
+            <button class="game-btn green" onclick="fregSubmitScore()" id="submitBtn">💾 SAVE SCORE</button>
+          </div>
+          <div id="savedMsg" class="hidden" style="color:#4ade80; font-family:'Bangers'; font-size:1.5rem; margin:15px 0;">✅ SAVED!</div>
+          <button class="game-btn" onclick="fregResetGame()">🔄 PLAY AGAIN</button>
+          <button class="game-btn dark" onclick="fregShowMenu()">🏠 MENU</button>
+        </div>
+
+        <!-- LEADERBOARD -->
+        <div id="gameLB" class="game-screen hidden">
+          <h2 style="color:var(--yellow);">🏆 TOP G's</h2>
+          <div id="lbList"><div style="color:var(--yellow); text-align:center; padding:20px;">Loading...</div></div>
+          <button class="game-btn dark" onclick="fregShowMenu()">← BACK</button>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -539,7 +433,7 @@
 </footer>
 
 <script>
-  // Floating frogs background
+  // ===== FLOATING BG =====
   const bg = document.getElementById('floatingBg');
   const emojis = ['🐸','💛','💎','🚀','⚡','🔥'];
   for(let i=0;i<20;i++){
@@ -552,7 +446,6 @@
     bg.appendChild(s);
   }
 
-  // Copy CA
   function copyCA(btn){
     const ca = document.getElementById('contractAddr').textContent;
     navigator.clipboard.writeText(ca).then(()=>{
@@ -562,12 +455,13 @@
     });
   }
 
-  // Close mobile menu on link click
   document.querySelectorAll('#navMenu a').forEach(a=>{
     a.addEventListener('click',()=>document.getElementById('navMenu').classList.remove('active'));
   });
 
-  // === MEME GENERATOR ===
+  // ============================================
+  // ===== MEME GENERATOR =====
+  // ============================================
   const canvas = document.getElementById('memeCanvas');
   const ctx = canvas.getContext('2d');
   let memeImg = new Image();
@@ -576,7 +470,6 @@
 
   memeImg.onload = drawMeme;
   memeImg.onerror = () => {
-    // Fallback if image not found
     ctx.fillStyle = '#ffdf3a';
     ctx.fillRect(0,0,canvas.width,canvas.height);
     ctx.fillStyle = '#000';
@@ -598,7 +491,6 @@
   }
 
   function useImageInMeme(src){
-    // Scroll to meme generator and load image
     document.getElementById('meme').scrollIntoView({behavior:'smooth'});
     memeImg = new Image();
     memeImg.crossOrigin = 'anonymous';
@@ -624,11 +516,9 @@
 
   function drawMeme(){
     if(!memeImg.complete || memeImg.naturalWidth === 0) return;
-    // Set canvas size to match image aspect
     const size = 600;
     canvas.width = size;
     canvas.height = size;
-    // Cover fit
     const scale = Math.max(size/memeImg.width, size/memeImg.height);
     const w = memeImg.width * scale;
     const h = memeImg.height * scale;
@@ -648,15 +538,8 @@
     ctx.strokeStyle = '#000';
     ctx.lineWidth = fontSize * 0.12;
     ctx.lineJoin = 'round';
-
-    if(top){
-      wrapText(top, canvas.width/2, fontSize + 10, canvas.width - 40, fontSize);
-    }
-    if(bottom){
-      wrapText(bottom, canvas.width/2, canvas.height - 20, canvas.width - 40, fontSize, true);
-    }
-
-    // Watermark
+    if(top) wrapText(top, canvas.width/2, fontSize + 10, canvas.width - 40, fontSize);
+    if(bottom) wrapText(bottom, canvas.width/2, canvas.height - 20, canvas.width - 40, fontSize, true);
     ctx.font = `bold ${canvas.width*0.035}px Poppins, sans-serif`;
     ctx.fillStyle = 'rgba(255,223,58,0.9)';
     ctx.strokeStyle = 'rgba(0,0,0,0.8)';
@@ -701,15 +584,393 @@
       link.download = 'freg-meme.png';
       link.href = canvas.toDataURL('image/png');
       link.click();
-    } catch(err){
-      alert('Could not save meme. If using uploaded images works fine!');
-    }
+    } catch(err){ alert('Could not save meme.'); }
   }
 
   function shareMeme(){
     const text = encodeURIComponent('Check out my $FREG meme! 🐸💛 The most based frog on Solana.\n\nCA: 9LbueXn3HMWWSTZPbH8jJKEZNKnb6YvTVn8HvqeQpump\n\n#FREG #Solana');
     window.open(`https://twitter.com/intent/tweet?text=${text}`,'_blank');
   }
+
+  // ============================================
+  // ===== $FREG MONEY RAIN GAME =====
+  // ============================================
+  const LB_PUBLIC = '69e53e6b8f40bb106841b978';
+  const LB_PRIVATE = 'b_rHOiZNIk6mU-UrGfNe8AN3LX9Ro1m0OjHhKszitlkA';
+
+  const fregCanvas = document.getElementById('fregGameCanvas');
+  const fctx = fregCanvas.getContext('2d');
+
+  let GW = 450, GH = 700;
+
+  function resizeFregCanvas(){
+    const container = document.getElementById('fregGameContainer');
+    const r = container.getBoundingClientRect();
+    fregCanvas.width = GW = r.width;
+    fregCanvas.height = GH = r.height;
+    if(!fregPlaying) fregDraw();
+  }
+  
+  // Use freg1.jpg as the player image (already on your site!)
+  const fregPlayerImg = new Image();
+  fregPlayerImg.src = 'images/freg1.jpg';
+
+  // ===== AUDIO =====
+  let fregAudioCtx = null;
+  function fregInitAudio(){
+    if(!fregAudioCtx){
+      try {
+        fregAudioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      } catch(e){ return; }
+    }
+    if(fregAudioCtx.state === 'suspended') fregAudioCtx.resume();
+  }
+  function fregPlaySound(type){
+    if(!fregAudioCtx) return;
+    const o = fregAudioCtx.createOscillator();
+    const g = fregAudioCtx.createGain();
+    o.connect(g); g.connect(fregAudioCtx.destination);
+    const t = fregAudioCtx.currentTime;
+    if(type === 'coin'){
+      o.type = 'sine';
+      o.frequency.setValueAtTime(1000, t);
+      o.frequency.exponentialRampToValueAtTime(2000, t + 0.1);
+      g.gain.setValueAtTime(0.25, t);
+      g.gain.exponentialRampToValueAtTime(0.01, t + 0.1);
+      o.start(t); o.stop(t + 0.1);
+    } else if(type === 'gem'){
+      o.type = 'square';
+      o.frequency.setValueAtTime(800, t);
+      o.frequency.setValueAtTime(1200, t + 0.05);
+      o.frequency.setValueAtTime(1600, t + 0.1);
+      g.gain.setValueAtTime(0.18, t);
+      g.gain.exponentialRampToValueAtTime(0.01, t + 0.2);
+      o.start(t); o.stop(t + 0.2);
+    } else if(type === 'hit'){
+      o.type = 'sawtooth';
+      o.frequency.setValueAtTime(150, t);
+      o.frequency.exponentialRampToValueAtTime(40, t + 0.3);
+      g.gain.setValueAtTime(0.4, t);
+      g.gain.exponentialRampToValueAtTime(0.01, t + 0.3);
+      o.start(t); o.stop(t + 0.3);
+    }
+  }
+
+  // ===== GAME STATE =====
+  let fregPlaying = false;
+  let fregFrame = 0;
+  let fregScore = 0;
+  let fregLives = 3;
+  let fregDifficulty = 1;
+  let fregItems = [];
+  let fregFloats = [];
+  let fregPlayer = { x: GW/2, y: 0, w: 80, h: 100 };
+  let fregTargetX = GW/2;
+  let fregLoopId = null;
+
+  function fregUpdateTargetX(clientX){
+    const r = fregCanvas.getBoundingClientRect();
+    fregTargetX = clientX - r.left;
+    if(fregTargetX < fregPlayer.w/2) fregTargetX = fregPlayer.w/2;
+    if(fregTargetX > GW - fregPlayer.w/2) fregTargetX = GW - fregPlayer.w/2;
+  }
+
+  fregCanvas.addEventListener('touchmove', e => {
+    if(!fregPlaying) return;
+    e.preventDefault();
+    fregUpdateTargetX(e.touches[0].clientX);
+  }, {passive:false});
+  fregCanvas.addEventListener('touchstart', e => {
+    if(!fregPlaying) return;
+    e.preventDefault();
+    fregUpdateTargetX(e.touches[0].clientX);
+  }, {passive:false});
+  fregCanvas.addEventListener('mousemove', e => {
+    if(!fregPlaying) return;
+    fregUpdateTargetX(e.clientX);
+  });
+  document.addEventListener('keydown', e => {
+    if(!fregPlaying) return;
+    if(e.key === 'ArrowLeft' || e.key === 'a') fregTargetX = Math.max(fregPlayer.w/2, fregPlayer.x - 35);
+    if(e.key === 'ArrowRight' || e.key === 'd') fregTargetX = Math.min(GW - fregPlayer.w/2, fregPlayer.x + 35);
+  });
+
+  function fregStartGame(){
+    fregInitAudio();
+    resizeFregCanvas();
+    document.getElementById('gameStart').classList.add('hidden');
+    document.getElementById('gameOver').classList.add('hidden');
+    document.getElementById('gameLB').classList.add('hidden');
+    document.getElementById('fregGameHud').classList.remove('hidden');
+    fregResetData();
+    fregPlaying = true;
+    fregLoop();
+  }
+
+  function fregResetData(){
+    fregScore = 0;
+    fregLives = 3;
+    fregFrame = 0;
+    fregDifficulty = 1;
+    fregItems = [];
+    fregFloats = [];
+    fregPlayer.y = GH - fregPlayer.h - 20;
+    fregPlayer.x = GW/2;
+    fregTargetX = GW/2;
+    fregUpdateHUD();
+    document.getElementById('savedMsg').classList.add('hidden');
+    document.getElementById('submitUI').classList.remove('hidden');
+    const sb = document.getElementById('submitBtn');
+    sb.innerText = '💾 SAVE SCORE';
+    sb.disabled = false;
+  }
+
+  function fregResetGame(){
+    document.getElementById('gameOver').classList.add('hidden');
+    fregStartGame();
+  }
+
+  function fregShowMenu(){
+    fregPlaying = false;
+    if(fregLoopId) cancelAnimationFrame(fregLoopId);
+    document.getElementById('fregGameHud').classList.add('hidden');
+    document.getElementById('gameOver').classList.add('hidden');
+    document.getElementById('gameLB').classList.add('hidden');
+    document.getElementById('gameStart').classList.remove('hidden');
+    fregDraw();
+  }
+
+  function fregUpdateHUD(){
+    document.getElementById('scoreUI').innerText = fregScore;
+    let h = '';
+    for(let i=0; i<fregLives; i++) h += '❤️';
+    document.getElementById('livesUI').innerText = h;
+  }
+
+  function fregSpawn(){
+    const rate = Math.max(18, 45 - fregDifficulty * 4);
+    if(fregFrame % Math.floor(rate) === 0){
+      const r = Math.random();
+      let type, w, h, sp, color;
+      if(r < 0.6){
+        type = 'coin'; w = 28; h = 28; sp = 3.5 + Math.random()*1.5; color = '#ffdf3a';
+      } else if(r < 0.85){
+        type = 'bad'; w = 22; h = 50; sp = 4.5 + Math.random()*2; color = '#ef4444';
+      } else {
+        type = 'gem'; w = 22; h = 50; sp = 6 + Math.random()*2; color = '#3ddc84';
+      }
+      sp *= fregDifficulty;
+      fregItems.push({
+        x: Math.random() * (GW - w*2) + w,
+        y: -50, w, h, type, sp, color, rot: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function fregFlash(){
+    const f = document.getElementById('flashOverlay');
+    f.style.opacity = '0.5';
+    setTimeout(()=>{ f.style.opacity = '0'; }, 100);
+  }
+
+  function fregHit(){
+    fregPlaySound('hit');
+    fregFlash();
+    fregLives--;
+    fregUpdateHUD();
+    if(fregLives <= 0) fregGameOver();
+  }
+
+  function fregGameOver(){
+    fregPlaying = false;
+    document.getElementById('fregGameHud').classList.add('hidden');
+    document.getElementById('finalScore').innerText = fregScore;
+    document.getElementById('gameOver').classList.remove('hidden');
+  }
+
+  function fregLoop(){
+    if(!fregPlaying) return;
+    fregFrame++;
+    fregScore += 1;
+    if(fregFrame % 300 === 0) fregDifficulty += 0.12;
+    fregPlayer.x += (fregTargetX - fregPlayer.x) * 0.25;
+    fregSpawn();
+    
+    const px = fregPlayer.x - fregPlayer.w/2 + 12;
+    const py = fregPlayer.y + 12;
+    const pw = fregPlayer.w - 24;
+    const ph = fregPlayer.h - 24;
+
+    for(let i = fregItems.length - 1; i >= 0; i--){
+      const it = fregItems[i];
+      it.y += it.sp;
+      it.rot += 0.05;
+      
+      if(it.x + it.w/2 > px && it.x - it.w/2 < px + pw &&
+         it.y + it.h/2 > py && it.y - it.h/2 < py + ph){
+        if(it.type === 'bad'){
+          fregHit();
+          fregFloats.push({x:it.x, y:it.y, text:'-1 ❤️', color:'#ef4444', life:1});
+        } else if(it.type === 'coin'){
+          fregPlaySound('coin');
+          fregScore += 10;
+          fregFloats.push({x:it.x, y:it.y, text:'+10', color:'#ffdf3a', life:1});
+          fregUpdateHUD();
+        } else if(it.type === 'gem'){
+          fregPlaySound('gem');
+          fregScore += 50;
+          fregFloats.push({x:it.x, y:it.y, text:'+50', color:'#3ddc84', life:1});
+          fregUpdateHUD();
+        }
+        fregItems.splice(i, 1);
+        continue;
+      }
+      if(it.y > GH + 50) fregItems.splice(i, 1);
+    }
+
+    for(let i = fregFloats.length - 1; i >= 0; i--){
+      fregFloats[i].y -= 2;
+      fregFloats[i].life -= 0.025;
+      if(fregFloats[i].life <= 0) fregFloats.splice(i, 1);
+    }
+
+    fregDraw();
+    fregLoopId = requestAnimationFrame(fregLoop);
+  }
+
+  function fregDraw(){
+    fctx.fillStyle = '#0a1910';
+    fctx.fillRect(0, 0, GW, GH);
+    
+    // Subtle grid
+    fctx.strokeStyle = 'rgba(255,223,58,0.05)';
+    fctx.lineWidth = 1;
+    for(let i=0; i<GW; i+=40){
+      fctx.beginPath(); fctx.moveTo(i, 0); fctx.lineTo(i, GH); fctx.stroke();
+    }
+    for(let i=(fregFrame%40); i<GH; i+=40){
+      fctx.beginPath(); fctx.moveTo(0, i); fctx.lineTo(GW, i); fctx.stroke();
+    }
+
+    // Items
+    fregItems.forEach(it => {
+      fctx.save();
+      fctx.translate(it.x, it.y);
+      if(it.type === 'coin'){
+        fctx.rotate(it.rot);
+        fctx.fillStyle = '#ffdf3a';
+        fctx.beginPath(); fctx.arc(0,0,it.w/2,0,Math.PI*2); fctx.fill();
+        fctx.fillStyle = '#a16207';
+        fctx.beginPath(); fctx.arc(0,0,it.w/2-3,0,Math.PI*2); fctx.fill();
+        fctx.fillStyle = '#fff5b8';
+        fctx.font = 'bold 18px Impact';
+        fctx.textAlign = 'center'; fctx.textBaseline = 'middle';
+        fctx.fillText('$', 0, 1);
+      } else {
+        // Candle (gem or bad)
+        fctx.fillStyle = it.color;
+        fctx.fillRect(-it.w/2, -it.h/2, it.w, it.h);
+        fctx.fillStyle = '#fff';
+        fctx.fillRect(-2, -it.h/2 - 7, 4, 7);
+        fctx.fillRect(-2, it.h/2, 4, 7);
+      }
+      fctx.restore();
+    });
+
+    // Player
+    if(fregPlayerImg.complete && fregPlayerImg.naturalWidth > 0){
+      fctx.save();
+      // Round mask for the frog avatar
+      fctx.beginPath();
+      fctx.arc(fregPlayer.x, fregPlayer.y + fregPlayer.h/2, fregPlayer.w/2, 0, Math.PI*2);
+      fctx.strokeStyle = '#ffdf3a';
+      fctx.lineWidth = 4;
+      fctx.shadowColor = '#ffdf3a';
+      fctx.shadowBlur = 20;
+      fctx.stroke();
+      fctx.shadowBlur = 0;
+      fctx.clip();
+      fctx.drawImage(fregPlayerImg, 
+        fregPlayer.x - fregPlayer.w/2, 
+        fregPlayer.y, 
+        fregPlayer.w, fregPlayer.h);
+      fctx.restore();
+    } else {
+      fctx.fillStyle = '#ffdf3a';
+      fctx.beginPath();
+      fctx.arc(fregPlayer.x, fregPlayer.y + fregPlayer.h/2, fregPlayer.w/2, 0, Math.PI*2);
+      fctx.fill();
+    }
+
+    // Float texts
+    fregFloats.forEach(ft => {
+      fctx.fillStyle = ft.color;
+      fctx.globalAlpha = ft.life;
+      fctx.font = "bold 22px 'Bangers', Impact";
+      fctx.textAlign = 'center';
+      fctx.fillText(ft.text, ft.x, ft.y);
+      fctx.globalAlpha = 1;
+    });
+  }
+
+  // ===== LEADERBOARD =====
+  async function fregSubmitScore(){
+    let name = document.getElementById('playerName').value.trim().toUpperCase();
+    name = name.replace(/[^A-Z0-9]/g, '').substring(0, 10);
+    if(!name) name = 'FREG';
+    const btn = document.getElementById('submitBtn');
+    btn.innerText = 'SAVING...';
+    btn.disabled = true;
+    try {
+      const proxy = "https://api.allorigins.win/get?url=";
+      const url = `http://dreamlo.com/lb/${LB_PRIVATE}/add/${name}/${fregScore}`;
+      await fetch(proxy + encodeURIComponent(url));
+      document.getElementById('submitUI').classList.add('hidden');
+      document.getElementById('savedMsg').classList.remove('hidden');
+    } catch(e){
+      btn.innerText = 'RETRY';
+      btn.disabled = false;
+    }
+  }
+
+  function fregShowLeaderboard(){
+    document.getElementById('gameStart').classList.add('hidden');
+    document.getElementById('gameOver').classList.add('hidden');
+    document.getElementById('gameLB').classList.remove('hidden');
+    fregFetchLB();
+  }
+
+  async function fregFetchLB(){
+    const list = document.getElementById('lbList');
+    list.innerHTML = '<div style="color:var(--yellow); text-align:center; padding:20px;">Loading...</div>';
+    try {
+      const proxy = "https://api.allorigins.win/get?url=";
+      const url = `http://dreamlo.com/lb/${LB_PUBLIC}/json`;
+      const res = await fetch(proxy + encodeURIComponent(url));
+      const wrap = await res.json();
+      const data = JSON.parse(wrap.contents);
+      if(!data.dreamlo || !data.dreamlo.leaderboard || !data.dreamlo.leaderboard.entry){
+        list.innerHTML = '<div style="color:#fff; text-align:center; padding:20px;">No scores yet!</div>';
+        return;
+      }
+      let entries = data.dreamlo.leaderboard.entry;
+      if(!Array.isArray(entries)) entries = [entries];
+      list.innerHTML = entries.slice(0,15).map((e,i)=>{
+        const rk = i===0?'🥇':i===1?'🥈':i===2?'🥉':`#${i+1}`;
+        return `<div class="lb-row"><span class="rk">${rk}</span><span class="nm">${e.name}</span><span class="sc">${e.score}</span></div>`;
+      }).join('');
+    } catch(err){
+      list.innerHTML = '<div style="color:#ef4444; text-align:center;">Failed to load.</div>';
+    }
+  }
+
+  // Init game render
+  window.addEventListener('resize', resizeFregCanvas);
+  setTimeout(()=>{
+    resizeFregCanvas();
+    fregPlayer.y = GH - fregPlayer.h - 20;
+    fregDraw();
+  }, 100);
 </script>
 
 </body>
